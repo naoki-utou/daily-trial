@@ -59,11 +59,11 @@
 	// お問い合わせ完了ページへの遷移
 	add_action( 'wp_footer', 'add_thanks_page' );
 	function add_thanks_page() {
-	echo <<< EOD
-	<script>
-		document.addEventListener( 'wpcf7mailsent', function( event ) {
-		  location = 'http://daytra-last.local/contact/thanks/'; /* 遷移先のURL */
-		}, false );
-	</script>
-	EOD;
+		echo <<< EOD
+		<script>
+			document.addEventListener( 'wpcf7mailsent', function( event ) {
+		  		location = 'http://daytra-last.local/contact/thanks/'; /* 遷移先のURL */
+			}, false );
+		</script>
+		EOD;
 	}
