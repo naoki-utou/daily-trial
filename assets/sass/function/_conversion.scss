@@ -1,0 +1,5 @@
+// font-sizeをremに変換
+$fontSize: 16;
+	@function rem($pixels) {
+		@return $pixels / $fontSize * 1rem;
+	}

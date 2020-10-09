@@ -1,0 +1,74 @@
+/* template-comment
+-------------------- */
+.template_comment {
+	@include mq (sp) {
+		padding: 0;
+	}
+
+	&_heading {
+		margin-bottom: 30px;
+		text-align: center;
+		font-size: $fontsize_big;
+		font-weight: bold;
+		@include mq (sp) {
+			padding: 0 4vw;
+			font-size: rem(20);
+		}
+	}
+
+	&_body {
+		position: relative;
+		margin-top: auto;
+		padding: 44px 30px;
+		height: 60%;
+		background: url(../../img/comment.jpg) center / cover no-repeat;
+		color: $color_white;
+		@include mq (sp) {
+			padding: 40px 30px 80px;
+			background-color: #999;
+			background-blend-mode: multiply;
+		}
+	}
+
+	&_txt_area {
+		width: 52%;
+		@include mq (sp) {
+			width: 100%;
+		}
+	}
+	&_name {
+		margin-bottom: 10px;
+		font-size: rem(20);
+		font-weight: bold;
+		@include mq (md) {
+			font-size: rem(18);
+		}
+
+		> span {
+			font-size: rem(26);
+			@include mq (sp) {
+				display: inline-block;
+			}
+		}
+	}
+	&_txt {
+		font-size: $fontsize_small;
+		line-height: 1.57;
+		@include mq (sp) {
+			font-size: $fontsize_minimum;
+		}
+	}
+
+	&_btn {
+		position: absolute;
+		bottom: 15px;
+		right: 14px;
+		z-index: 90;
+		@include mq (sp) {
+			bottom: 20px;
+			left: 0;
+			right: 0;
+			margin: 0 30%;
+		}
+	}
+}

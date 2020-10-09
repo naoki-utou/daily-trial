@@ -1,0 +1,239 @@
+/* news
+-------------------- */
+// 記事一覧
+.news {
+	&_list {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+
+	&_card {
+		margin-bottom: 30px;
+		width: calc(100% / 3 - 30px);
+		height: 260px;
+		transition: .3s;
+		&:hover {
+			@include mq (pc) {
+				opacity: .8;
+				transition: .3s;
+			}
+			@include mq (lg) {
+				opacity: .8;
+				transition: .3s;
+			}		
+		}
+		@include mq (sp) {
+			width: 80%;
+			height: 270px;
+			margin: 0 auto 30px;
+		}
+
+		&_img {
+			height: 55%;
+			@include mq (sp) {
+				height: 58%;
+			}
+			img {
+				height: 100%;
+			}
+		}
+
+		&_body {
+			padding: 15px;
+			height: 45%;
+			background-color: $color_white;
+			@include mq (md) {
+				padding: 12px 8px;
+			}
+			@include mq (sp) {
+				height: 42%;
+			}
+		}
+		&_data {
+			margin-bottom: 4px;
+			font-size: $fontsize_minimum;
+		}
+	}
+
+	&_btn {
+		position: absolute;
+		top: 10px;
+		right: 0;
+		z-index: 90;
+		@include mq (sp) {
+			top: 100%;
+			left: 0;
+			right: 0;
+			margin: 0 30%;
+		}
+	}
+}
+
+// pageNavi
+.wp-pagenavi {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// 前へ・次へボタン
+	.page, 
+	.current, 
+	.previouspostslink,
+	.nextpostslink {
+		margin: 0 9px 0 0;
+		padding: 4px 8px;
+		font-size: $fontsize_minimum;
+		border: 1px solid $color_black;
+	}
+	.page {
+		color: $color_yellow;
+		background-color: $color_black;
+	}
+	.current {
+		color: $color_black;
+	}
+	.previouspostslink,
+	.nextpostslink {
+		font-weight: bold;
+		padding: 4px 6px;
+	}
+
+	// 表示しているページ数
+	.page_number {
+		display: inline-block;
+		margin-right: 16px;
+		padding: 7px 8px;
+		font-size: $fontsize_minimum;
+		color: $color_yellow;
+		background-color: $color_black;
+		&:last-child {
+			margin-right: 0;
+		}
+		&.prev,
+		&.next {
+			color: $color_white;
+			font-size: rem(8);
+		}
+	}
+}
+
+
+// 個別記事ページ
+.single_news {
+	@include mq (md) {
+		padding: 0 6vw;
+	}
+
+	// 記事画像
+	&_img {
+		width: 100%;
+		height: 578px;
+		@include mq (md) {
+			height: 480px;
+		}
+		@include mq (sp) {
+			height: 270px;
+		}
+		
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// 記事見出し
+	&_heading {
+		padding: 14px 30px 17px;
+		background-color: $color_black;
+		color: $color_white;
+		&_data {
+			margin-bottom: 8px;
+			font-size: $fontsize_minimum;
+		}
+		&_ttl {
+			font-size: rem(26);
+			font-weight: bold;
+			@include mq (sp) {
+				font-size: rem(20);
+			}
+		}
+	}
+
+	// 記事の内容
+	&_body {
+		padding: 30px 30px 25px;
+		background-color: rgba(255, 255, 255, .9);
+		h2, h3, h4 {
+			margin-bottom: 30px;
+			font-weight: bold;
+		}
+		h2 {
+			font-size: rem(28);
+		}
+		h3 {
+			font-size: $fontsize_big;
+			@include mq (sp) {
+				font-size: $fontsize_medium;
+			}
+		}
+		h4 {
+			font-size: $fontsize_medium;
+			@include mq (sp) {
+				font-size: rem(16);
+			}
+		}
+		p {
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+
+	// 前後の記事のリンク
+	&_pagelink{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 30px;
+		&_area {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			width: calc(100% / 2 - 30px);
+			&.right {
+				justify-content: flex-end;
+				text-align: right;
+			}
+
+			// アイコン
+			.i_left {
+				margin-right: 12px;
+			}
+			.i_right {
+				margin-left: 12px;
+			}
+			.i_size {
+				font-size: $fontsize_big;
+			}
+		}
+
+		// 前後の記事のタイトル
+		&_ttl {
+			font-size: rem(16);
+			font-weight: bold;
+			&.left {
+				text-align: left;
+			}
+			&.right {
+				text-align: right;
+			}
+		}
+		&_time {
+			font-size: $fontsize_minimum;
+		}
+	}
+}

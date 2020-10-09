@@ -1,0 +1,93 @@
+/* template-topCast
+-------------------- */
+.template_topCast {
+	height: 835px;
+	background: linear-gradient(180deg, transparent 0, transparent 23%, rgba(255, 255, 255, .9) 23%, rgba(255, 255, 255, .9) 100%);
+	@include mq (md) {
+		height: 880px;
+	}
+	@include mq (sp) {
+		height: 80%;
+		background: linear-gradient(180deg, transparent 0, transparent 10%, rgba(255, 255, 255, .9) 10%, rgba(255, 255, 255, .9) 100%);
+	}
+
+	&_list {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		@include mq (sp) {
+			display: block;
+		}
+	}
+
+	&_item {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 15px;
+		width: calc(100% / 3 - 30px);
+		@include mq (sp) {
+			width: 90%;
+			margin: 0 auto;	
+			padding-bottom: 30px;		
+		}
+	}
+
+	&_img {
+		width: 220px;
+		height: 220px;
+		border-radius: 50%;
+		margin-bottom: 38px;
+		img {
+			height: 100%;
+			border-radius: 50%;
+		}
+		@include mq (sp) {
+			width: 200px;
+			height: 200px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&_name {
+		text-align: center;
+		margin-bottom: 20px;
+		@include mq (sp) {
+			margin-bottom: 16px;
+		}
+		
+		&.medium {
+			display: inline-block;
+			margin-top: 8px;
+			margin-bottom: 0;
+			font-size: $fontsize_medium;
+			font-weight: bold;
+		}
+		&.minimum {
+			display: inline-block;
+			margin-top: 8px;
+			margin-bottom: 0;
+			font-size: $fontsize_minimum;
+			color: $color_gray;
+		}
+	}
+	
+	&_txt {
+		font-size: $fontsize_minimum;
+		color: $color_gray;
+		line-height: 1.6;
+	}
+
+	&_btn {
+		display: inline-block;
+		padding: 5px 17px;
+		color: $color_red;
+		background-color: $color_white;
+		border: 5px solid $color_red;
+		@include mq (sp) {
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+	}
+}

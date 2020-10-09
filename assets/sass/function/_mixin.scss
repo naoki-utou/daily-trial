@@ -1,0 +1,34 @@
+// ---------- breakPoint ---------- //
+$breakpoints: (
+ 'xs': 'screen and (max-width: 479px)',
+ 'sm': 'screen and (min-width: 480px) and (max-width: 559px)',
+ 'md': 'screen and (min-width: 560px) and (max-width: 959px)',
+ 'lg': 'screen and (min-width: 960px)',
+
+ 'sp': 'screen and (max-width: 767px)', 
+ 'tab': 'screen and (min-width: 768px) and (max-width: 1139px)',
+ 'pc': 'screen and (min-width: 1140px)',
+
+) !default;
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
+/* media
+-------------------------------- */
+.is_sp {
+	display: none;
+	@include mq (sp) {
+		display: block;
+	}
+}
+
+.is_pc {
+	@include mq (sp) {
+		display: none;
+	}
+}

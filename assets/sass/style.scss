@@ -1,0 +1,38 @@
+// ---------- セッティング ---------- //
+@import "function/_conversion";
+@import "function/_mixin.scss";
+@import "setting/_typography";
+@import "setting/_font-size";
+@import "setting/_color";
+
+// ---------- 共通 ---------- //
+@import "common/_base";
+@import "common/_header";
+@import "common/_footer";
+
+// ---------- top ---------- //
+@import "page/template-parts/template-topNews";
+@import "page/template-parts/template-comment";
+@import "page/template-parts/template-topCast";
+@import "page/template-parts/template-schedule";
+@import "page/template-parts/template-top";
+
+// ---------- top ---------- //
+@import "page/top/_mv";
+@import "page/top/_introduction";
+@import "page/top/_top-story";
+
+// ---------- news ---------- //
+@import "page/news/_news";
+
+// ---------- story ---------- //
+@import "page/story/_story";
+
+// ---------- comment ---------- //
+@import "page/comment/_comment";
+
+// ---------- cast ---------- //
+@import "page/cast/_cast";
+
+// ---------- inquiry ---------- //
+@import "page/inquiry/_inquiry";

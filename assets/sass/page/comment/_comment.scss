@@ -1,0 +1,45 @@
+/* comment
+-------------------- */
+.comment {
+	&_body {
+		@include mq (sp) {
+			padding: 40px 30px;
+		}
+	}
+
+	&_list {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin-top: 30px;
+		@include mq (sp) {
+			padding: 0 14vw;
+		}
+	}
+
+	&_item {
+		margin-bottom: 30px;
+		width: calc(100% / 3 - 30px);
+		@include mq (sp) {
+			width: 100%;
+		}
+
+		&_name {
+			margin-bottom: 6px;
+			text-align: center;
+			font-size: $fontsize_big;
+			font-weight: bold;
+		}
+
+		&_post {
+			margin-bottom: 12px;
+			text-align: center;
+			font-size: $fontsize_minimum;
+		}
+
+		&_txt {
+			font-size: $fontsize_small;
+		}
+	}
+}

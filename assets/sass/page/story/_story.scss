@@ -1,0 +1,134 @@
+/* story
+-------------------- */
+.story {
+	padding: 0;
+
+	&_top {
+		position: relative;
+		padding-bottom: 60px;
+		&::before {
+			background-color: $color_transparent_black;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			content: '';
+		}
+	}
+
+	&_inner {
+		max-width: 70%;
+		@include mq (tab) {
+			max-width: 90%;
+		}
+		@include mq (sp) {
+			max-width: 90%;
+			margin: 0 auto;
+		}
+	}
+
+	&_ttl {
+		margin-bottom: 50px;
+		color: $color_white;
+	}
+
+	&_top_body {
+		width: 40%;
+		margin-left: auto;
+		margin-right: 10%;
+		@include mq (tab) {
+			width: 60%;
+			margin-right: 0;
+		}
+		@include mq (sp) {
+			padding: 0 10px;
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+	// story-list
+	&_wrap {
+		position: relative;
+		height: 420px;
+		background-color: #000;
+	}
+
+	// 背景画像
+	&_img {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		z-index: 80;
+		height: 100%;
+		width: 60%;
+		@include mq (sp) {
+			width: 100%;
+		}
+
+		&.left {
+			left: 0;
+		}
+		&.right {
+			right: 0;
+		}
+		&::before {
+			background-color: $color_transparent_black;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			content: '';
+		}
+	}
+
+	// テキスト
+	&_body {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 40%;
+		z-index: 90;
+		@include mq (tab) {
+			width: 60%;
+		}
+		@include mq (sp) {
+			padding: 0 10px;
+			width: 100%;
+		}
+
+		&.left {
+			left: 10%;
+			@include mq (tab) {
+				left: 0;
+			}
+			@include mq (sp) {
+				left: 0;
+				right: 0;
+			}
+		}
+		&.right {
+			right: 10%;
+			@include mq (tab) {
+				right: 0;
+			}
+			@include mq (sp) {
+				left: 0;
+				right: 0;
+			}
+		}
+	}
+	&_txt {
+		font-size: $fontsize_small;
+		color: $color_white;
+		line-height: 1.8;
+		@include mq (md) {
+			font-size: $fontsize_minimum;
+		}
+		@include mq (sp) {
+			font-size: $fontsize_minimum;
+		}
+	}
+}

@@ -1,0 +1,109 @@
+/* cast
+-------------------- */
+// musician
+.musician {
+	margin-bottom: 25px;
+	&_list {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+	&_item {
+		margin-bottom: 30px;
+		width: calc(100% / 2 - 30px);
+		display: flex;
+		align-items: flex-start;
+		@include mq (sp) {
+			width: 100%;
+		}
+	}
+	&_img {
+		margin-right: 10px;
+		width: 130px;
+		height: 130px;
+		@include mq (md) {
+			width: 110px;
+			height: 110px;
+		}
+		@include mq (sp) {
+			margin-right: 20px;
+			width: 110px;
+			height: 110px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+	}
+	&_name {
+		margin-bottom: 24px;
+		font-size: rem(16);
+		line-height: 1;
+		&.medium {
+			margin-bottom: 0;
+			line-height: 1.7;
+			font-size: $fontsize_big;
+		}
+		&.minimum {
+			margin-bottom: 0;
+			font-size: $fontsize_minimum;
+			line-height: 1.4;
+		}
+
+		@include mq (sp) {
+			margin-bottom: 16px;
+		}
+	}
+	&_txt {
+		font-size: $fontsize_minimum;
+		line-height: 1.6;
+	}
+
+
+}
+
+// staff
+.staff {
+	padding: 80px 0 40px;
+	background-color: rgba(255, 255, 255, .9);
+	@include mq (md) {
+		padding: 80px 30px 40px;
+	}
+
+	&_list {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+	&_item {
+		margin-bottom: 30px;
+		text-align: center;
+		width: calc(100% / 3 - 30px);
+		@include mq (sp) {
+			width: 100%;
+		}
+	}
+	&_name {
+		margin-bottom: 24px;
+		font-size: rem(16);
+		line-height: 1;
+		&.medium {
+			margin-bottom: 0;
+			line-height: 1.7;
+			font-size: $fontsize_big;
+		}
+		&.minimum {
+			margin-bottom: 0;
+			font-size: $fontsize_minimum;
+			line-height: 1.4;
+		}
+
+		@include mq (sp) {
+			margin-bottom: 16px;
+		}
+	}
+}

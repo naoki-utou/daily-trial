@@ -1,0 +1,24 @@
+
+// ---------- font-size ---------- //
+
+// ベース
+$fontsize_base_sp: rem(14) !default;
+$fontsize_base_pc: rem(16) !default;
+
+// 英語見出し
+$fontsize_heading_en: rem(43) !default;
+
+// 特大サイズ
+$fontsize_oversized: rem(34) !default;
+
+// 大サイズ
+$fontsize_big: rem(22) !default;
+
+// 中サイズ
+$fontsize_medium: rem(18) !default;
+
+// 小サイズ
+$fontsize_small: rem(14);
+
+// 最小サイズ
+$fontsize_minimum: rem(12) !default;

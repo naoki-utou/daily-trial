@@ -1,0 +1,119 @@
+/* header
+-------------------- */
+.header {
+	height: 90px;
+	padding: 20px 0 55px;
+	@include mq (sp) {
+		padding: 0 4vw;
+		height: 60px;
+	}
+
+	// ナビゲーション
+	&_nav {
+		&_list {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include mq (sp) {
+				justify-content: flex-start;
+				overflow-x: scroll;
+				line-height: 60px;
+			}
+		}
+
+		li {
+			margin-right: 30px;
+			text-align: center;
+			transition: .3s;
+			white-space: nowrap;
+			@include mq (tab) {
+				margin-right: 15px;
+				margin-left: 15px;
+			}
+			@include mq (sp) {
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+			@include mq (lg) {
+				&:last-child {
+					margin-right: 0;
+				}
+				&:hover {
+			 		opacity: .8;
+			 		transition: .3s;
+			 	}
+			}
+
+			a {
+				font-size: $fontsize_small;
+				font-weight: bold;
+				text-align: center;
+				transition: .3s;
+				@include mq (sp) {
+					text-align: center;
+					font-size: rem(16);
+				}
+				&::after {
+					display: block;
+					font-size: $fontsize_big;
+					font-weight: bold;
+					white-space: nowrap;
+					transition: .3s;
+					@include mq (sp) {
+						display: none;
+					}
+				}
+			}
+		}
+
+		// メニューのフリガナ
+		&_top {
+			a::after {
+				content: 'TOP';
+				@include mq (sp) {
+					display: none;
+				}
+			}
+		}
+		&_news {
+			a::after {
+				content: 'NEWS';
+				@include mq (sp) {
+					display: none;
+				}
+			}
+		}
+		&_story {
+			a::after {
+				content: 'STORY';
+				@include mq (sp) {
+					display: none;
+				}
+			}
+		}
+		&_comment {
+			a::after {
+				content: 'COMMENT';
+				@include mq (sp) {
+					display: none;
+				}
+			}
+		}
+		&_cast {
+			a::after {
+				content: 'CAST';
+				@include mq (sp) {
+					display: none;
+				}
+			}
+		}
+		&_inquiry {
+			a::after {
+				content: 'INQUIRY';
+				@include mq (sp) {
+					display: none;
+				}
+			}
+		}
+	}
+}

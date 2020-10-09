@@ -1,0 +1,91 @@
+/* mv
+-------------------- */
+.mv {
+	background: url(../../img/mv-bg.jpg) center -200px/ cover no-repeat;
+	height: 520px;
+	@include mq (tab) {
+		background-position: center center;
+	}
+	@include mq (sp) {
+		background-position: center center;
+	}
+
+	&_inner {
+		position: relative;
+		max-width: 80%;
+		margin: 0 auto;
+		padding: 60px 110px;
+		height: 100%;
+		@include mq (tab) {
+			max-width: 95%;
+			padding: 80px 40px;
+		}
+		@include mq (sp) {
+			max-width: 90%;
+			padding: 60px 10px;
+		}
+	}
+
+	&_ttl {
+		margin-bottom: 40px;
+		@include mq (sp) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&_body {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		flex-wrap: wrap;
+		@include mq (tab) {
+			align-items: center;
+		}
+	}
+
+	&_schedule {
+		width: 40%;
+		@include mq (tab) {
+			width: 50%;
+		}
+		@include mq (sp) {
+			width: 80%;
+			margin: 0 auto 30px;
+		}
+	}
+
+	&_txt_area {
+		width: 37%;
+		@include mq (tab) {
+			width: 40%;
+		}
+		@include mq (sp) {
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+
+	&_txt {
+		margin-bottom: 10px;
+		font-size: $fontsize_small;
+		color: $color_white;
+		line-height: 1.5;
+		@include mq (sp) {
+			font-size: $fontsize_minimum;
+		}
+	}
+
+	&_btn {
+		position: absolute;
+		bottom: -30px;
+		right: 5%;
+		z-index: 90;
+		@include mq (sp) {
+			text-align: center;
+			bottom: -4%;
+			left: 0;
+			right: 0;
+			margin: 0 20%;
+		}
+	}
+}

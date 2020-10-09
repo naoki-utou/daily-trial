@@ -1,0 +1,118 @@
+/* base
+-------------------- */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: $fontsize_base_pc;
+	font-family: $font_base;
+	height: 100%;
+	line-height: 1.4;
+	background-attachment: fixed;
+	@include mq (sp) {
+		font-size: $fontsize_base_sp;
+	}
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	color: $color_base;
+	text-decoration: none;
+	transition: .3s;
+	&:hover {
+		@include mq (pc) {
+			opacity: .8;
+			transition: .3s;
+		}
+		@include mq (lg) {
+			opacity: .8;
+			transition: .3s;
+		}			
+	}
+}
+
+// セクション
+.sec {
+	margin-bottom: 60px;
+	@include mq (sp) {
+		padding: 0 4vw;
+	}
+	@include mq (md) {
+		padding: 0 4vw;
+	}
+
+	&_ttl {
+		font-size: $fontsize_heading_en;
+		font-weight: bold;
+		font-family: $font_en;
+		margin-bottom: 30px;
+		text-align: center;
+		&.white {
+			color: $color_white;
+		}
+	}
+}
+.inner {
+	position: relative;
+	max-width: 810px;
+	height: 100%;
+	margin: 0 auto;
+	@include mq (md) {
+		max-width: 100%;
+	}
+	@include mq (sp) {
+		max-width: 100%;
+	}
+}
+
+// リンクボタン
+.link_btn_area {
+	text-align: center;
+
+	&.flex {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}
+
+.link_btn {
+	text-align: center;
+	font-size: $fontsize_small;
+	font-weight: bold;
+	color: $color_white;
+	line-height: 1;
+	background-color: $color_red;
+	transition: .3s;
+	@include mq (sp) {
+		font-size: $fontsize_minimum;
+	}
+	&.small {
+		padding: 11px 22px;
+	}
+	&.large {
+		padding: 23px 31px;
+		@include mq (sp) {
+			padding: 16px 24px;
+		}
+	}
+	&.brown {
+		background-color: $color_brown;
+	}
+
+	&:hover {
+		@include mq (pc) {
+			opacity: .8;
+			transition: .3s;
+		}
+		@include mq (lg) {
+			opacity: .8;
+			transition: .3s;
+		}		
+	}
+}

@@ -1,0 +1,183 @@
+/* template-news
+-------------------- */
+.template_topNews {
+	&_list {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+
+	// news-card
+	&_card {
+		margin-bottom: 30px;
+		width: calc(100% / 3 - 30px);
+		height: 260px;
+		transition: .3s;
+		&:hover {
+			@include mq (pc) {
+				opacity: .8;
+				transition: .3s;
+			}
+			@include mq (lg) {
+				opacity: .8;
+				transition: .3s;
+			}		
+		}
+		@include mq (sp) {
+			width: 80%;
+			height: 270px;
+			margin: 0 auto 30px;
+		}
+
+		&_img {
+			height: 55%;
+			@include mq (sp) {
+				height: 58%;
+			}
+			img {
+				height: 100%;
+			}
+		}
+
+		&_body {
+			padding: 15px;
+			height: 45%;
+			background-color: $color_white;
+			@include mq (md) {
+				padding: 12px 8px;
+			}
+			@include mq (sp) {
+				height: 42%;
+			}
+		}
+
+		&_data {
+			margin-bottom: 4px;
+			font-size: $fontsize_minimum;
+		}
+
+		// 4個目と5個目の記事
+		&:nth-child(4),
+		&:nth-child(5) {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			margin-bottom: 0;
+			height: 88px;
+			width: calc(100% / 2 - 30px);
+			@include mq (sp) {
+				display: block;
+				height: 270px;
+				width: 80%;
+				margin: 0 auto 30px;
+			}
+			
+			a {
+				display: flex;
+				height: 100%;
+				@include mq (sp) {
+					display: block;
+				}
+			}
+			.template_topNews_card {
+				&_img {
+					height: 100%;
+					width: 40%;
+					@include mq (sp) {
+						height: 58%;
+						width: 100%;
+					}
+				}
+				&_body {
+					padding: 8px 12px;
+					height: 100%;
+					width: 60%;
+					@include mq (sp) {
+						height: 42%;
+						width: 100%;
+					}
+				}
+				&_data {
+					font-size: rem(10);
+				}
+				&_ttl {
+					font-size: rem(14);
+					@include mq (md) {
+						font-size: rem(12);
+					}
+				}
+			}
+		}
+	} // /.news-card
+
+	&_btn {
+		position: absolute;
+		top: 10px;
+		right: 0;
+		z-index: 90;
+		@include mq (sp) {
+			top: 100%;
+			left: 0;
+			right: 0;
+			margin: 0 30%;
+		}
+	}
+}
+
+
+// pageNavi
+.wp-pagenavi {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// 前へ・次へボタン
+	.page, 
+	.current, 
+	.previouspostslink,
+	.nextpostslink {
+		margin: 0 9px 0 0;
+		padding: 4px 8px;
+		font-size: $fontsize_minimum;
+		border: 1px solid $color_black;
+	}
+	.page {
+		color: $color_yellow;
+		background-color: $color_black;
+	}
+	.current {
+		color: $color_black;
+	}
+	.previouspostslink,
+	.nextpostslink {
+		font-weight: bold;
+		padding: 4px 6px;
+	}
+
+	// 表示しているページ数
+	.page_number {
+		display: inline-block;
+		margin-right: 16px;
+		padding: 7px 8px;
+		font-size: $fontsize_minimum;
+		color: $color_yellow;
+		background-color: $color_black;
+		&:last-child {
+			margin-right: 0;
+		}
+		&.prev,
+		&.next {
+			color: $color_white;
+			font-size: rem(8);
+		}
+	}
+}
+
+
+
+
+
+
+
+

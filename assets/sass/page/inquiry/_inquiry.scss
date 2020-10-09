@@ -1,0 +1,113 @@
+/* inquiry
+-------------------- */
+.inquiry {
+	&_form_area {
+		padding: 30px;
+		background-color: $color_transparent_white;
+	}
+
+	&_txt {
+		margin-bottom: 20px;
+		font-size: $fontsize_medium;
+		font-weight: bold;
+		line-height: 1.66;
+		@include mq (sp) {
+			font-size: rem(16);
+			margin-bottom: 30px;
+		}
+	}
+
+	&_form {
+		&_item {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			margin-bottom: 15px;
+			@include mq (sp) {
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+
+		&_label {
+			margin-right: 15px;
+			width: 28%;
+			text-align: right;
+			font-size: $fontsize_medium;
+			font-weight: bold;
+			@include mq (sp) {
+				margin-bottom: 5px;
+				width: 100%;
+				font-size: rem(16);
+				text-align: left;
+			}
+		}
+
+		&_input {
+			width: 68%;
+			@include mq (sp) {
+				width: 100%;
+			}
+
+			input[type="text"],
+			input[type="tel"],
+			input[type="email"],
+			textarea {
+				padding: 5px;
+				width: 100%;
+				height: 45px;
+				border: none;
+				@include mq (sp) {
+					height: 30px;
+				}
+			}
+
+			textarea {
+				height: 165px;
+				@include mq (sp) {
+					height: 120px;
+				}
+			}
+		}
+
+		&_submit {
+			margin-top: 15px;
+			padding: 20px 80px;
+			font-size: $fontsize_medium;
+			font-weight: bold;
+			color: $color_white;
+			background-color: $color_red;
+			border: none;
+			transition: .3s;
+			@include mq (sp) {
+				padding: 16px 60px;
+				font-size: rem(16);
+			}
+			@include mq (lg) {
+				&:hover {
+					opacity: .8;
+					cursor: pointer;
+					transition: .3s;
+				}
+			}
+		}
+	}
+
+
+	// お問い合わせ完了ページ
+	&_done {
+		&_body {
+			background-color: $color_transparent_white;
+			padding: 25px 0;
+			text-align: center;
+		}
+
+		&_txt {
+			font-size: $fontsize_medium;
+			font-weight: bold;
+			@include mq (sp) {
+				font-size: rem(16);
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+/* footer
+-------------------- */
+.footer {
+	background-color: $color_black;
+
+	&_copyright {
+		text-align: center;
+		line-height: 80px;
+		font-size: $fontsize_minimum;
+		color: $color_white;
+		@include mq (sp) {
+			font-size: rem(10);
+		}
+	}
+}
