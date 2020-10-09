@@ -35,11 +35,11 @@
 
 	// 投稿アーカイブページ作成
 	function post_has_archive( $args, $post_type ) {
-    if ( 'post' == $post_type ) {
-        $args['rewrite'] = true;
-        $args['has_archive'] = 'news'; // スラッグ名
-    }
-    return $args;
+    		if ( 'post' == $post_type ) {
+        		$args['rewrite'] = true;
+        		$args['has_archive'] = 'news'; // スラッグ名
+    		}
+    		return $args;
 	}
 	add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
 
